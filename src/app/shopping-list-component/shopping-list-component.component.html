@@ -1,5 +1,6 @@
-
-<div class="relative overflow-x-auto m-3 border border-gray-200 rounded-xl">
+<app-shopping-list-edit/>
+<hr>
+<div class="relative overflow-x-auto mx-3 my-5 border border-gray-200 rounded-xl">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -15,15 +16,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white dark:bg-gray-800">
+            <tr class="bg-white cursor-pointer hover:bg-gray-100"
+                *ngFor="let ingredient of ingredients" >
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Pork
+                    {{ ingredient.name }}
                 </th>
                 <td class="px-6 py-4">
-                    1
+                    {{ ingredient.quantity }}
                 </td>
                 <td class="px-6 py-4">
-                    $10
+                    ${{ ingredient.price }}
                 </td>
             </tr>
         </tbody>

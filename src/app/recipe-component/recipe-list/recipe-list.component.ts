@@ -7,8 +7,8 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
-    new Recipe('Test Name', 'Test Desc', 'https://picsum.photos/1920/1080/?random'),
-    new Recipe('Test Name', 'Test Desc', 'https://picsum.photos/1920/1080/?random'),
+    new Recipe('Test Name 01', 'Test Desc 01', 'https://picsum.photos/1920/1080/?01'),
+    new Recipe('Test Name 02', 'Test Desc 02', 'https://picsum.photos/1920/1080/?02'),
 
   ];
 

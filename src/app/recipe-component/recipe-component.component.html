@@ -1,11 +1,14 @@
 <div class="container mx-auto">
   <div class="w-full grid md:grid-cols-2 grid-cols-1 gap-4">
     <div class="w-full text-center">
-      <app-recipe-list/>
+      <app-recipe-list (recipeWasSelected)="selectedRecipe = $event"/>
     </div>
     <hr class="block md:hidden">
     <div class="w-full text-center">
-      <app-recipe-detail/>
+      <app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"/>
+      <ng-template #infoText>
+        <p class="text-slate-800 text-xl font-semibold">Please select a Recipe!</p>
+      </ng-template>
     </div>
     <hr class="block md:hidden">
   </div>
